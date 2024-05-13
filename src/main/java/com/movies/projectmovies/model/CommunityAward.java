@@ -1,9 +1,6 @@
-package model;
+package com.movies.projectmovies.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -13,8 +10,14 @@ import java.io.Serializable;
 @Table(name = "community_award")
 public class CommunityAward implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, unique = true)
     private String name;
+
+    @Column(nullable = false)
     private int pointsUsed;
 
 

@@ -1,4 +1,4 @@
-package model;
+package com.movies.projectmovies.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -13,6 +13,8 @@ public class Platform implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, unique = true)
     private String name;
 
 }

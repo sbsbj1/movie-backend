@@ -1,4 +1,4 @@
-package model;
+package com.movies.projectmovies.model;
 
 
 import jakarta.persistence.*;
@@ -14,8 +14,13 @@ public class Reviews implements Serializable {
     @Id
     private Long id;
 
+
     private String content;
-    private float userRating;
+
+
+    private double userRating;
+
+    private boolean heart;
 
     @ManyToOne
     @JoinColumn(name = "id_user")

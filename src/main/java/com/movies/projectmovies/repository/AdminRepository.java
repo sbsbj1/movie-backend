@@ -1,6 +1,6 @@
-package repository;
+package com.movies.projectmovies.repository;
 
-import model.Admin;
+import com.movies.projectmovies.model.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package model;
+package com.movies.projectmovies.model;
 
 
 import jakarta.persistence.*;
@@ -10,7 +10,12 @@ import java.io.Serializable;
 @Data
 @Table(name = "platform_movies")
 public class PlatformMovies implements Serializable {
-    @OneToMany
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
     @JoinColumn(name = "id_movie")
     private Movies movieId;
 
